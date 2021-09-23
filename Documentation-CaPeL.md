@@ -1,4 +1,7 @@
-# Site public
+# Gestion du site public
+Les contenus du site publics https://capel.portcros-parcnational.fr/ sont gérés dans un CMS du nom de Ghost.
+Certains contenus spécifiques sont extraits de l’application (LoCoKit) plutôt que du CMS.
+Les contenus sont ensuite transformés en site statique pour disposer de pages légères, rapides et d’un très haut niveau de sécurité.
 
 Le CMS Ghost est accessible sur https://capel.portcros-parcnational.fr/ghost/.
 
