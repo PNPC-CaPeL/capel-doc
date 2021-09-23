@@ -1,3 +1,56 @@
+# Site public
+
+Le CMS Ghost est accessible sur https://capel.portcros-parcnational.fr/ghost/.
+
+![CaPeL_haut](uploads/4780a16bbe612345ca09af30ecca7a43/CaPeL_haut.png)
+Les logos sont enregistrés dans [@bma ?]
+Les liens vers les pages proviennent du champ  [@bma ?] des [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages)
+
+  
+-  -  -  -
+![capel_links_to_lck](uploads/f9317e0f766dadb8df056e0566034edd/capel_links_to_lck.png)
+Ces deux boutons donnent accès à l’application.
+
+  
+-  -  -  -
+![capel_texte_header](uploads/7f613b3b7daada040470fcef9edfa49d/capel_texte_header.png)
+Ce texte est celui du premier paragraphe de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > [Page d'accueil](https://capel.portcros-parcnational.fr/ghost/#/editor/page/60c236698582a800018424e2)
+
+  
+-  -  -  -
+![capel_compteurs](uploads/fe3b3008b365b85a5826475f240036a3/capel_compteurs.png)
+Ce bloc remonte automatiquement les informations de l’application dans le site à l’aide du bloc Statistiques (tag custom-stats) de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > (Page d'accueil).
+
+  
+-  -  -  -
+![capel_map](uploads/c6984131282c44d779b5fc2631882a01/capel_map.png)
+La carte et la légende sont paramétrées dans l’application.
+
+  
+-  -  -  -
+![capel_pages](uploads/408bba35a207c0fc48c38c89b3a38a18/capel_pages.png)
+Ce bloc remonte automatiquement les informations des pages l’aide du bloc Vignettes de pages (tag custom-blocks) de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > (Page d'accueil).
+Apparaissent ici :
+- l’image fournie dans « Settings » de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages)
+- le champ « Excerpt » (dans « Settings ») de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages)
+
+
+  
+-  -  -  -
+![capel_sn](uploads/dfeeb4989d1977363777655d745742c8/capel_sn.png)
+Les réseaux sociaux sont réglés dans l’application :
+
+
+  
+-  -  -  -
+![capel_footer](uploads/f9769169f92a35612b9364a4c937776f/capel_footer.png)
+Cette partie est gérée dans [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > [Pied de page](https://capel.portcros-parcnational.fr/ghost/#/editor/page/60b77ea1f6c8f8000199d4a8)
+
+
+
+
+
+# Application
 Se connecter en tant que structure de plongée.
 
 
