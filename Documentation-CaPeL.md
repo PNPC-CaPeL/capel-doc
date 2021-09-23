@@ -24,7 +24,8 @@ Ce bloc remonte automatiquement les informations de l’application dans le site
   
 -  -  -  -
 ![capel_map](uploads/c6984131282c44d779b5fc2631882a01/capel_map.png)
-La carte et la légende sont paramétrées dans l’application.
+La carte et la légende sont paramétrées dans l’application :
+[Interface d’administration de l’application](https://backoffice.capel.portcros-parcnational.fr/workspace/8dbf6e3c-3dc0-464e-9887-d2010fa8d689/database/10ce931c-4e48-40a2-b8f9-c1caba7d07c3) > Paramètres du site public : variables MAP_CENTER, MAP_ZOOM, MAP_BASEMAP, MAP_STYLES et MAP_LEGENDS.
 
   
 -  -  -  -
@@ -39,6 +40,7 @@ Apparaissent ici :
 -  -  -  -
 ![capel_sn](uploads/dfeeb4989d1977363777655d745742c8/capel_sn.png)
 Les réseaux sociaux sont réglés dans l’application :
+[Interface d’administration de l’application](https://backoffice.capel.portcros-parcnational.fr/workspace/8dbf6e3c-3dc0-464e-9887-d2010fa8d689/database/10ce931c-4e48-40a2-b8f9-c1caba7d07c3) > Paramètres du site public : variables LINK_FACEBOOK, LINK_TWITTER, LINK_INSTAGRAM, LINK_YOUTUBE, LINK_PINTEREST.
 
 
   
