@@ -103,7 +103,7 @@ Ce bloc remonte automatiquement les informations de l’application dans le site
 ![capel_map](uploads/c6984131282c44d779b5fc2631882a01/capel_map.png)
 
 La carte et la légende sont paramétrées dans l’application :
-[Interface d’administration de l’application](https://backoffice.capel.portcros-parcnational.fr/workspace/8dbf6e3c-3dc0-464e-9887-d2010fa8d689/database/10ce931c-4e48-40a2-b8f9-c1caba7d07c3) > Paramètres du site public : variables `MAP_CENTER`, `MAP_ZOOM`, `MAP_BASEMAP`, `MAP_STYLES` et `MAP_LEGENDS`.
+[Interface d’administration de l’application](https://backoffice.capel.portcros-parcnational.fr/workspace/8dbf6e3c-3dc0-464e-9887-d2010fa8d689/database/10ce931c-4e48-40a2-b8f9-c1caba7d07c3) > Paramètres du site public : variables `MAP_CENTER`, `MAP_ZOOM`, `MAP_BASEMAP`, `MAP_STYLES` et `MAP_LEGENDS`, `SPOT_PUBLIC_FIELDS`.
 
 La carte est constituée de fonds de plan (tuiles raster) et de données vectorielles.
 
@@ -115,7 +115,10 @@ La carte est constituée de fonds de plan (tuiles raster) et de données vectori
   - Éléments de la table `Profil utilisateur` filtré par `Type`=`Structure de plongée`) et ayant coché *"Je donne mon accord pour apparaître…"*
   - Élements de la table `Aire Marine Protégée`
 
-
+Infobulles :
+Pour chaque spot il y a :
+- un tooltip (qui apparaît au survol) contenant le nom du spot
+- un popup (qui apparaît au clic) contenant un tableau clé/valeur, dont chaque ligne est un champ, défini par SPOT_PUBLIC_FIELDS dans la table Paramètre du site public
 
 ----
 ### Résumé des pages de contenu
