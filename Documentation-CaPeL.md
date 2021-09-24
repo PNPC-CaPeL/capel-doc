@@ -149,22 +149,20 @@ Se connecter en tant que structure de plongée.
 ### Page « Signer les règlements »
 
 Après connexion, l’utilisateur est amené sur la page « Signer les règlements ».
-> [Note JPO : J’aimerais donner une URL, mais je ne vois pas de permalien que l’on puisse mettre dans la documentation]
 
 ![home_SP](uploads/07f927e708705ac1dd437936efb4839e/home_SP.png)
 
 Il ne peut pas signer de règlement tant qu’il n’a pas complété sa fiche d’information et au moins un bateau.  
-> [Note JPO : rien ne l’indique à l’écran]
 
 Pour compléter la fiche d’information et déclarer un bateau, cliquer sur « Mes informations » :
 
 ![bouton-Mes_informations](uploads/1fd6e4ef79cc9713a08f0c9be884659b/bouton-Mes_informations.png)
 
 L'utilisation est amené à la page « Mes informations »
-> [Note JPO : J’aimerais donner une URL, mais je ne vois pas de permalien que l’on puisse mettre dans la documentation]
+
 
 ### Page « Mes informations »
-> [Note JPO : J’aimerais donner une URL, mais je ne vois pas de permalien que l’on puisse mettre dans la documentation]
+
 
 La page présente un formulaire à compléter :
 
@@ -176,7 +174,6 @@ Remplir les informations :
 
 Pour positionner sur la carte l’emplacement de la structure, cliquer sur le bouton « Marker Tool » ![marker_tool_button](uploads/804216f4eae2d24b8a22f3002fa004fb/marker_tool_button.png)
 
-> [Note JPO : Cela aurait intéressant de traduire « Marker Tool » en français]
 
 ![marker_tool_button_in_context](uploads/e387485ce288538a94eb40d0d303a4a4/marker_tool_button_in_context.png)
 
@@ -188,7 +185,7 @@ Cocher « Je donne mon accord pour apparaître sur la carte CaPeL des structure
 
 ![accord-publication](uploads/899a099a3feb5cee8e1fea1483ace17c/accord-publication.png)
 
-> [Note JPO : À quoi sert la case « Test compte OK » ?]
+
 
 #### Ajouter un bateau
 
