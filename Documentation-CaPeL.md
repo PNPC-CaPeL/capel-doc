@@ -1,46 +1,124 @@
+# Architecture générale
+
+[backoffice]: https://backoffice.capel.portcros-parcnational.fr
+[ghost]: https://capel.portcros-parcnational.fr/ghost/
+[public]: https://capel.portcros-parcnational.fr
+
+- Site public
+  - [https://capel.portcros-parcnational.fr/][public]
+  - "Lecture seule"
+  - Point d'entrée vers le backoffice
+  - Agrège les contenus de Ghost et du backoffice
+- CMS (Ghost)
+  - [https://capel.portcros-parcnational.fr/<b>ghost/</b>][ghost]
+  - Contribution des pages, de la navigation, et du footer du site public
+- Application et interface d’administration (LoCoKit)
+  - [https://<b>backoffice.</b>capel.portcros-parcnational.fr/][backoffice]
+  - Gestion de l'ensemble des données techniques
+  - Paramétrages du site public
+
 # Gestion du site public
-Les contenus du site publics https://capel.portcros-parcnational.fr/ sont gérés dans un CMS du nom de Ghost.  
+Les contenus du site [public] sont gérés dans un CMS : Ghost.  
 Certains contenus spécifiques sont extraits de l’application (LoCoKit) plutôt que du CMS.  
 Les contenus sont ensuite transformés en site statique pour disposer de pages légères, rapides et d’un très haut niveau de sécurité.
 
-Le CMS Ghost est accessible sur https://capel.portcros-parcnational.fr/ghost/.
+Le CMS Ghost est accessible sur [https://capel.portcros-parcnational.fr/ghost/][ghost].
+
+## Contribution dans Ghost
+
+Le site dispose de plusieurs structures :
+- Pages "classiques"
+  - Raccourci d'édition avec `<adresse publique>/edit`
+- Pages spécifiques
+  - Page d'accueil
+  - Footer
+- Navigation principale : [`Settings > Navigation > Primary
+navigation`](https://capel.portcros-parcnational.fr/ghost/#/settings/navigation)
+
+Le contenu des pages est constitué de pavés (blocks) :
+- Pavés principaux (primary)
+  - Image
+  - Markdown
+  - HTML
+  - Divider
+  - Bookmark
+- Pavés media (embed)
+- Pavés spéciaux (snippets)
+  - Carte principale
+  - Statistiques
+  - Vignettes de pages
+
+
+## Mécanique de mises à jour du site public
+
+La mise à jour du site public est démarrée dans les cas suivants :
+
+- Depuis le [backoffice] automatiquement
+  - Modification de la table `Plongée` (déclarations)
+  - Modification de la table `Profil utilisateur` (structures de plongées)
+  - Modification de la table `Spot de plongée`
+- Depuis le [backoffice] manuellement
+  - Modification de la table `Aire Marine Protégée`
+  - Modification de la table `Paramètres du site public`
+  - Modification de la table `Zone de protection`
+- Depuis [Ghost] automatiquement
+  - Modification de tout contenu ou paramètre
+
+## Présentation des différentes parties du site
 
 ----
-
+### Haut de page 
 ![CaPeL_haut](uploads/4780a16bbe612345ca09af30ecca7a43/CaPeL_haut.png)
 
 Les liens vers les pages proviennent du réglage [`Settings > Navigation > Primary
 navigation`](https://capel.portcros-parcnational.fr/ghost/#/settings/navigation)
 
-![navigation](uploads/navigation.gif)
+![navigation](uploads/navigation.gif)  
 
 ----
+### Espace d'action
 
 ![capel_links_to_lck](uploads/f9317e0f766dadb8df056e0566034edd/capel_links_to_lck.png)
 
-Ces deux boutons donnent accès à l’application.
+Ces deux boutons donnent accès à l’application.  
 
 ----
+### Texte de présentation
 
 ![capel_texte_header](uploads/7f613b3b7daada040470fcef9edfa49d/capel_texte_header.png)
 
-Ce texte est celui du premier paragraphe de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > [Page d'accueil](https://capel.portcros-parcnational.fr/ghost/#/editor/page/60c236698582a800018424e2)
+Ce texte est celui du premier paragraphe de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > [Page d'accueil](https://capel.portcros-parcnational.fr/ghost/#/editor/page/60c236698582a800018424e2)  
 
 ----
+### Compteurs
 
 ![capel_compteurs](uploads/fe3b3008b365b85a5826475f240036a3/capel_compteurs.png)
 
-Ce bloc remonte automatiquement les informations de l’application dans le site à l’aide du bloc Statistiques (tag `custom-stats`) de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > (Page d'accueil).
+Ce bloc remonte automatiquement les informations de l’application dans le site à l’aide du bloc Statistiques (tag `custom-stats`) de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > (Page d'accueil).  
+
 
 ----
+### Carte du site public
 
 ![capel_map](uploads/c6984131282c44d779b5fc2631882a01/capel_map.png)
 
 La carte et la légende sont paramétrées dans l’application :
 [Interface d’administration de l’application](https://backoffice.capel.portcros-parcnational.fr/workspace/8dbf6e3c-3dc0-464e-9887-d2010fa8d689/database/10ce931c-4e48-40a2-b8f9-c1caba7d07c3) > Paramètres du site public : variables `MAP_CENTER`, `MAP_ZOOM`, `MAP_BASEMAP`, `MAP_STYLES` et `MAP_LEGENDS`.
 
-----
+La carte est constituée de fonds de plan (tuiles raster) et de données vectorielles.
 
+- Fonds de cartes
+  - Définis par la [clé `MAP_BASEMAP` (au format JSON) de la table *Paramètre du site public*](assets/basemap.png) du [backoffice]
+- Données vectorielles (importées depuis le backoffice à chaque mise à jour du site)
+  - Éléments de la table `Spot de plongée` ayant le `Statut`=`Public`
+  - Éléments de la table `Zone de protection`
+  - Éléments de la table `Profil utilisateur` filtré par `Type`=`Structure de plongée`) et ayant coché *"Je donne mon accord pour apparaître…"*
+  - Élements de la table `Aire Marine Protégée`
+
+
+
+----
+### Résumé des pages de contenu
 ![capel_pages](uploads/408bba35a207c0fc48c38c89b3a38a18/capel_pages.png)
 
 Ce bloc remonte automatiquement les informations des pages l’aide du bloc Vignettes de pages (tag `custom-blocks`) de [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > (Page d'accueil).
@@ -50,14 +128,14 @@ Apparaissent ici :
 
 
 ----
-
+### Réseaux sociaux
 ![capel_sn](uploads/dfeeb4989d1977363777655d745742c8/capel_sn.png)
 Les réseaux sociaux sont réglés dans l’application :
 [Interface d’administration de l’application](https://backoffice.capel.portcros-parcnational.fr/workspace/8dbf6e3c-3dc0-464e-9887-d2010fa8d689/database/10ce931c-4e48-40a2-b8f9-c1caba7d07c3) > Paramètres du site public : variables `LINK_FACEBOOK`, `LINK_TWITTER`, `LINK_INSTAGRAM`, `LINK_YOUTUBE`, `LINK_PINTEREST`.
 
 
 ----
-
+### Pied de page
 ![capel_footer](uploads/f9769169f92a35612b9364a4c937776f/capel_footer.png)
 
 Cette partie est gérée dans [{Pages}](https://capel.portcros-parcnational.fr/ghost/#/pages) > [Pied de page](https://capel.portcros-parcnational.fr/ghost/#/editor/page/60b77ea1f6c8f8000199d4a8)
