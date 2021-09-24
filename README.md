@@ -3,6 +3,7 @@
 [backoffice]: https://backoffice.capel.portcros-parcnational.fr
 [ghost]: https://capel.portcros-parcnational.fr/ghost/
 [public]: https://capel.portcros-parcnational.fr
+[superset]: https://capel-superset.makina-corpus.net/dashboard/list/?pageIndex=0&sortColumn=changed_on_delta_humanized&sortOrder=desc&viewMode=table
 
 - Site public
   - [https://capel.portcros-parcnational.fr/][public]
@@ -16,6 +17,8 @@
   - [https://<b>backoffice.</b>capel.portcros-parcnational.fr/][backoffice]
   - Gestion de l'ensemble des données techniques
   - Paramétrages du site public
+- Statistiques et tableaux de bord (Superset)
+  - [https://capel-superset.makina-corpus.net/superset/][superset]
 
 # Gestion du site public
 Les contenus du site [public] sont gérés dans un CMS : Ghost.  
@@ -145,7 +148,7 @@ Cette partie est gérée dans [{Pages}](https://capel.portcros-parcnational.fr/g
 
 ----
 
-# Application
+# Application (en cours de rédaction)
 
 Se connecter en tant que structure de plongée.
 
